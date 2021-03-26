@@ -15,6 +15,6 @@ export class UserService {
 
   /*table*/
   getAll(): Observable<User[]> {
-    return this.http.get<User[]>(`$(this.serverAddress)`);
+    return this.http.get<User[]>(`${this.serverAddress}`);
   }
 }
