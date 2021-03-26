@@ -13,10 +13,18 @@ export class UserListComponent implements OnInit {
   /*table*/
   userList$: Observable<User[]> = this.userService.getAll();
 
+  /* filter */
+  phrase: string = '';
+
                /*table*/
   constructor(private userService: UserService) { }
 
   ngOnInit(): void {
+  }
+
+  /* filter */
+  onChangePhrase(event: Event): void {
+    this.phrase = (event.target as HTMLInputElement).value;
   }
 
 }
