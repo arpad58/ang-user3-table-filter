@@ -23,7 +23,7 @@ export class UserListComponent implements OnInit {
   }
 
   /* filter */
-  onChangePhrase(event: Event): void {
+  onFilterPhrase(event: Event): void {
     this.phrase = (event.target as HTMLInputElement).value;
   }
 
